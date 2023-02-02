@@ -1,0 +1,107 @@
+body{
+    background-image: radial-gradient(#000000 20%, #2d005a);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.anpassung{
+    height: 150px;
+    width: 150px;
+}
+
+a{
+    color:white;
+    font-size: 30px;
+    font-family: 'TEKO';
+}
+
+.titel{
+    text-align: center;
+    font-family: 'Lilita One';
+    font-size: 50px;
+    background-image: linear-gradient(rgb(136, 0, 255), rgb(136, 11, 194));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: white;
+}
+
+button{
+    text-align: center;
+    color: white;
+    background-color: #23242a;
+    border-color: transparent;
+
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    font-family: 'TEKO';
+}
+
+button:hover{
+    transition: background-color 1s ease, color 1s ease, width 1s ease;
+    background-color: #8800ff;
+    color: black;
+    width: 350px;
+    text-decoration: none;
+}
+
+.distance{ 
+    position: relative;
+    padding: 10px;
+}
+
+.box{
+    text-align: center;
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    top: -50%;
+    left: -50%;
+    position: absolute;
+    width: 380px;
+    transform-origin: bottom right;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,#8800ff, #8800ff);
+    animation: animate 10s linear infinite;
+}
+.box::after{
+    content: '';
+    top: -50%;
+    left: -50%;
+    position: absolute;
+    width: 380px;
+    transform-origin: bottom right;
+    height: 420px;
+    background: linear-gradient(0deg, transparent,#8800ff, #8800ff);
+    animation: animate 10s linear infinite;
+    animation-delay: -5s;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+.form{
+    position: absolute;
+    border-radius: 20px;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+}
